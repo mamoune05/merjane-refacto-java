@@ -260,7 +260,7 @@
 					<changeLogFile>src/main/resources/db/changelog-master.yaml</changeLogFile>
 					<url>jdbc:postgresql://${liquibase.config.dbhost}:5432/db</url>
 					<username>user</username>
-					<password>password</password>
+					<password>${env.LIQUIBASE_DB_PASSWORD}</password>
 					<driver>org.postgresql.Driver</driver>
 					<referenceUrl>hibernate:spring:com.nimbleways.springboilerplate?dialect=org.hibernate.dialect.PostgreSQL9Dialect</referenceUrl>
 					<promptOnNonLocalDatabase>${liquibase.config.promptOnNonLocalDatabase}</promptOnNonLocalDatabase>
